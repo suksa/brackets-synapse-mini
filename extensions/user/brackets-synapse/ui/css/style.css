@@ -1,0 +1,372 @@
+
+#synapse {
+	-webkit-box-flex: 1;
+	-webkit-font-smoothing: antialiased;
+	box-sizing: : border-box;
+	position: relative;
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+	background-color: rgb(22, 22, 22);
+}
+
+#synapse .input-append button {
+	margin: 0;
+	border-left: 0;
+}
+
+#synapse .btn {
+	background-color: #3f3f3f;
+	border: 1px solid #202020;
+	color: #cccccc;
+	-webkit-box-shadow: rgba(255, 255, 255, 0.0588235) 0px 1px 0px 0px inset;
+}
+#synapse .btn:hover {
+	background-color: #2e2e2e;
+}
+#synapse .btn.primary {
+	background-color: #016dc4;
+}
+#synapse .btn.primary:hover {
+	background-color: #005191;
+}
+#synapse-icon {
+	background-image: url(../synapse.svg);
+}
+#synapse-header {
+	display: -webkit-flex;
+	box-sizing: border-box;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: rgb(25, 25, 25);
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+	color: #adb9bd;
+	width: 100%;
+	background-color: rgb(25, 25, 25);
+	overflow: hidden;
+}
+#synapse-header-spinner-container {
+	display: -webkit-box;
+	padding: 6px;
+	line-height: 15px;
+
+}
+#synapse-header .spinner {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	margin-left: 14px;
+}
+#synapse-header span.fa.disabled,
+#synapse-header span.fa.disabled:hover {
+	color: #717171;
+}
+
+
+#synapse-header > div {
+	display: -webkit-box;
+	padding: 6px;
+	line-height: 15px;
+}
+#synapse-header > div.left,
+#synapse-header .synapse-header-spinner-container {
+	margin-top: 3px;
+}
+#synapse-header > div.left > span {
+	text-shadow: 0 0 8px #53a3ff;
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: 2px;
+}
+#synapse-header > div.left > span.synapse-current-version {
+	font-size: 0.7em;
+	line-height: 0.7em;
+	opacity: 0.35;
+	padding-left: 5px;
+}
+#synapse-header > div.right {
+	margin: 0;
+	z-index: 1;
+	background-color: rgb(25, 25, 25);
+}
+#synapse-header > div .fa {
+	line-height: 24px;
+	height: 24px;
+	width: 1em;
+	margin: 0 3px;
+	text-align: center;
+}
+#synapse-header > div .fa:hover {
+	color: rgb(143, 221, 255);
+}
+#synapse-header span.fa-angle-double-up {
+	-webkit-transition: transform 0.2s ease-in-out;
+	-webkit-transform-origin: center;
+	-webkit-transform: rotateZ(0deg);
+}
+#synapse-header span.fa-angle-double-up.rotate {
+	-webkit-transition: transform 0.2s ease-in-out;
+	-webkit-transform-origin: center;
+	-webkit-transform: rotateZ(180deg);
+}
+
+
+#synapse-server-setting {
+	position: absolute;
+	top: 37px;
+	left: 0;
+	box-sizing: border-box;
+	width: 100%;
+	height: auto;
+	background-color: rgb(20, 20, 20);
+	border-top: 1px solid rgba(255, 255, 255, 0.025);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.8) inset, 0 -3px 6px -3px rgba(0, 0, 0, 0.7) inset;
+	padding: 7px;
+}
+#synapse-server-setting div.synapse-server-setting-header {
+	padding: 7px;
+}
+#synapse-server-setting div.synapse-server-setting-header .title {
+	color: #89929b;
+}
+#synapse-server-setting div.synapse-server-setting-header span.fa:hover {
+	color: rgb(143, 221, 255);
+}
+#synapse-server-setting div.synapse-server-setting-header div {
+	display: inline-block;
+}
+#synapse-server-setting table th i {
+	color: #475564;
+	padding-top: 1px;
+}
+#synapse-server-setting table th i.done {
+	color: #c2d3e6;
+}
+#synapse-server-setting table th,
+#synapse-server-setting table td {
+	vertical-align:middle;
+	padding: 3px 5px;
+	box-sizing: padding-box;
+}
+#synapse-server-setting table td div.protocol-group > button {
+	border: 0;
+}
+#synapse-server-setting .input-append {
+	margin-bottom: 0;
+}
+#synapse-server-setting .input-append input#synapse-server-privateKey-path {
+	width: 147px;
+}
+#synapse-server-setting .input-append input#synapse-server-exclude {
+	width: 177px;
+}
+#synapse-server-setting table td div.protocol-group > button.active {
+	background: #518dbf;
+}
+#synapse-server-setting table td div.auth-group > button.active {
+	background: #4ca263;
+}
+#synapse-server-setting table td input[type=text],
+#synapse-server-setting table td input[type=password] {
+	border: 1px solid #202020;
+	color: #fff;
+	box-sizing: padding-box;
+	padding: 3px;
+	border-radius: 2px;
+	height: auto;
+	background: #333;
+	margin: 0;
+}
+#synapse-server-setting table td input.invalid {
+	box-shadow: 0 1px 1px #ad3737 inset, 0 -1px 1px #ad3737 inset;
+}
+#synapse-server-setting table td input::-webkit-input-placeholder {
+	padding: 3px;
+	opacity: 0.7;
+	font-size: 12px;
+	line-height: 12px;
+}
+#synapse-server-setting div.synapse-server-setting-footer {
+	padding-top: 10px;
+	padding-bottom: 13px;
+	padding-left: 30px;
+	margin-bottom: 0;
+	margin-top: 10px;
+	border-top: 1px solid rgba(255, 255, 255, 0.034);
+}
+#synapse-server-setting button {
+	padding:3px 8px;
+}
+
+#synapse-server-list {
+	position: absolute;
+	top: 37px;
+	box-sizing: border-box;
+	min-height: 100px;
+	/*height: auto;*/
+	width: 100%;
+	background-color: #222222;
+	border-top: 1px solid #111111;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.7) inset, 0 -3px 6px -2px rgba(0, 0, 0, 0.8) inset;
+	text-shadow: none;
+}
+#synapse-server-list.list-shadow {
+	
+}
+#synapse-server-list button:focus {
+	border: 1px solid #222222;
+}
+#synapse-server-setting input:focus {
+	box-shadow: none;
+}
+#synapse-server-list div.synapse-server-list-header {
+	padding: 14px;
+};
+#synapse-server-list div.synapse-server-list-header .title {
+	color: #89929b;
+}
+#synapse-server-list div.synapse-server-list-header span.fa:hover {
+	color: rgb(143, 221, 255);
+}
+#synapse-server-list div.synapse-server-list-header div {
+	display: inline-block;
+}
+#synapse-server-list div.list {
+	min-height: 10px;
+	max-height: 538px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+#synapse-server-list div.list div.wrapper {
+	    padding: 4px 7px 2px 7px;
+}
+
+
+#synapse-server-list div.list div.item:first-child {
+}
+#synapse-server-list div.list div.item:last-child {
+	border-bottom: none;
+}
+#synapse-server-list div.list div.item:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+#synapse-server-list div.list div.item {
+	border-top: 1px solid rgb(50, 50, 50);
+	border-bottom: 1px solid rgb(20, 20, 20);
+	width: 50%;
+    float: left;
+	
+}
+#synapse-server-list div.list div.item.expand {
+	-webkit-transition: transform 0.5s ease-in-out;
+	-webkit-transform-origin: 50% 0%;
+	-webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#synapse-server-list div.list div.item.collapse {
+	-webkit-transition: transform 0.5s ease-in-out;
+	-webkit-transform-origin: 50% 0%;
+	-webkit-transform: matrix(1, 0, 0, 0, 0, 0);
+}
+
+#synapse-server-list div.list div.item div i {
+	padding: 0 5px;
+	font-size: 0.8em;
+
+	opacity: 0.5;
+}
+
+#synapse-server-list div.list div.item div.synapse-server-list-name {
+	margin: 0;
+	padding-bottom: 5px;
+	border-bottom: 1px solid rgb(40, 40, 40);
+}
+
+#synapse-server-list div.list div.item div.synapse-server-list-name p {
+	font-size: 12px;
+	margin: 0;
+	color: #18cae0;
+}
+#synapse-server-list div.list div.item div.synapse-server-list-info {
+	padding-top: 0px;
+}
+#synapse-server-list div.list div.item div.synapse-server-list-name span {
+	font-size: 0.8em;
+	max-width: 120px;
+}
+#synapse-server-list div.list div.item div.btn-group {
+	display: inline-block;
+	opacity: 0;
+}
+
+#synapse-server-list button {
+	padding: 2px 6px;
+	font-size: 11px;
+	border-radius: 0;
+}
+
+#synapse-server-list button.btn-connect:hover {
+	background-color: #016dc4;
+}
+#synapse-server-list button.btn-disconnect:hover {
+	background-color: #800;
+}
+#synapse-server-list button.btn-edit:hover {
+	background-color: #5cb85c;
+}
+#synapse-server-list button.btn-delete:hover {
+	background-color: #d9534f;
+}
+
+#synapse #synapse-treeview-container {
+	background-color: rgba(25, 25, 25, 1);
+	box-sizing: border-box;
+	position: absolute;
+	width: 100%;
+	top: 37px;
+	bottom: 10px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+#synapse-treeview-container,
+#synapse-treeview-container div#synapse-tree
+{
+	width: 100%;
+}
+
+
+div#synapse-tree {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;*/
+	background-color: rgb(25, 25, 25);
+	height: 100%;
+}
+
+#synapse .synapse-server-setting-alert * {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#synapse .synapse-server-setting-alert {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background-color: #d9534f;
+	opacity: 0;
+	padding: 20px;
+}
+#synapse p.synapse-server-setting-alert-title {
+	text-shadow: 0 0 5px #000;
+	color: #fff;
+	letter-spacing: 1px;
+	font-size: 16px;
+	font-weight: bold;
+}
+#synapse p.synapse-server-setting-alert-caption {
+	color: #e6e6e6;
+}

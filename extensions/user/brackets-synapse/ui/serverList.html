@@ -1,0 +1,49 @@
+<div id="synapse-server-list" class="hide">
+	<div class="synapse-server-list-header">
+		<div class="title">{{Strings.SYNAPSE_LIST_TITLE}} 
+		    <input type="text" id="keyword" style="width:90px">
+		</div>
+		<div class="pull-right">
+			<span class="fa fa-times close-btn"></span>
+		</div>
+	</div>
+	<div class="list">
+	{{#serverList}}
+		<div class="item" data-index="{{index}}">
+			<div class="wrapper">
+				<div class="synapse-server-list-name">
+					<p class="name">{{name}}</p>
+					<i class="fa fa-cloud"></i>
+					<span>{{host}}</span>
+				</div>
+				<div class="synapse-server-list-info clearfix">
+					<div class="btn-group pull-right" data-index="{{index}}">
+						<button class="btn small btn-connect connection-btn" data-index="{{index}}">{{Strings.SYNAPSE_LIST_CONNECT}}</button>
+						<button class="btn small btn-edit" data-index="{{index}}">{{Strings.SYNAPSE_LIST_EDIT}}</button>
+						<button class="btn small btn-delete" data-index="{{index}}">{{Strings.SYNAPSE_LIST_DELETE}}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	{{/serverList}}
+	</div>
+</div>
+<script>    
+$.fn.multisort = function(key = '') {
+    $( this ).sort(function (a, b) {
+        if (key) 
+            return $( key , a).text() > $( key, b).text() ? 1 : -1;
+        else
+            return $( a ).text() > $( b ).text() ? 1 : -1;
+    }).appendTo( $(this).parent() ); 
+}
+$('#synapse-server-list .item').multisort('.name');
+    
+$("#keyword").keyup(function() {
+  var k = $(this).val();
+  $("#synapse-server-list .item").hide();
+  var temp = $("#synapse-server-list .item .name:contains('" + k + "')");
+
+  $(temp).parents('.item').show();
+})
+</script>
